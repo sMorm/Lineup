@@ -1,0 +1,126 @@
+
+body{
+  background-color: #FFDED4  ;
+}
+.App {
+  text-align: center;
+  outline: none;
+  animation: dropin 1s forwards;
+}
+
+/* Disables highlighting */
+*:focus{outline:none}
+
+.App-logo {
+  margin-top: 20px;
+  height: 70px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.App-form {
+  margin-top:100px;
+
+}
+
+.App-form input{
+   font-size: 20px;
+   text-align: center;
+   width: 420px;
+   border: solid 1px #E6E6E6;
+   padding: 20px;
+   border-top-right-radius: 10px;
+   border-top-left-radius: 10px;
+   background-color: #F7F7F7;
+}
+
+.Todos {
+  display: table;
+  list-style-type: none;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: -3px;
+  width: 440px;
+  padding-left: 0;
+  -webkit-box-shadow: 10px 10px 78px 16px rgba(0,0,0,0.05);
+  -moz-box-shadow: 10px 10px 78px 16px rgba(0,0,0,0.05);
+  box-shadow: 10px 10px 78px 16px rgba(0,0,0,0.05);
+
+}
+
+.Todos li {
+  background-color: white;
+  width: 420px;
+  padding: 20px;
+  border: solid 1px #E6E6E6;
+}
+
+.Completed.true p{
+  display: inline;
+  text-decoration: line-through;
+}
+
+.Completed.false p {
+  display: inline;
+}
+
+.Remove-todo {
+  float: right;
+  border: none;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 11px;
+  color: white;
+  background-color: salmon;
+  cursor: pointer;
+}
+
+.Complete-button {
+  float: left;
+  border: none;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: 700;
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  cursor: pointer;
+}
+
+.Complete-button.completed {
+  background-color: lightgreen;
+}
+
+.Complete-button.incomplete {
+  background-color: lightblue;
+}
+
+li.Endblock {
+  background-color: #F7F7F7;
+  height: 20px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  color: grey;
+}
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes dropin {
+  from { opacity: 0; transform: translateY(25%); }
+  to   { opacity: 1; transform: translateY(0%);}
+}
