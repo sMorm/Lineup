@@ -1,5 +1,6 @@
 // Dependecies
 import React, { Component } from 'react';
+
 //import { StaggeredMotion, spring } from 'react-motion';
 
 // Components
@@ -76,14 +77,14 @@ class App extends Component {
       <a href="http://github.com/smorm/" target="_blank">
         <img className="App-logo" alt="React Logo" src='https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg'/>
       </a>
-        <TodoForm
-          onSubmit={this.onSubmit}
-          onChange={this.onChange}
-          value={this.state.todo}/>
-        <TodoList
-          removeItem={this.removeItem}
-          completeItem={this.completeItem}
-          todos={this.state.todos}/>
+      <TodoForm
+        onSubmit={this.onSubmit}
+        onChange={this.onChange}
+        value={this.state.todo}/>
+      <TodoList
+        removeItem={this.removeItem}
+        completeItem={this.completeItem}
+        todos={this.state.todos}/>
       </div>
     );
   }

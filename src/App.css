@@ -29,7 +29,6 @@ body{
 
 .App-form {
   margin-top:100px;
-
 }
 
 .App-form input{
@@ -43,13 +42,16 @@ body{
    background-color: #F7F7F7;
 }
 
+.App-form.mobile input{
+  width: 250px;
+}
+
 .Todos {
   display: table;
   list-style-type: none;
   text-align: center;
   margin: 0 auto;
   margin-top: -3px;
-  width: 440px;
   padding-left: 0;
   -webkit-box-shadow: 10px 10px 78px 16px rgba(0,0,0,0.05);
   -moz-box-shadow: 10px 10px 78px 16px rgba(0,0,0,0.05);
@@ -57,11 +59,20 @@ body{
 
 }
 
+.Todos.mobile {
+  width: 240px;
+}
+
 .Todos li {
   background-color: white;
   width: 420px;
   padding: 20px;
   border: solid 1px #E6E6E6;
+}
+
+.Todos.mobile li {
+  width: 250px;
+  padding: 20px;
 }
 
 .Completed.true p{
