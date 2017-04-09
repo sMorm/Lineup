@@ -28,14 +28,18 @@ body{
 }
 
 .App-form {
-  margin-top:100px;
+  margin-top:50px;
 }
 
 .App-form input{
    font-size: 20px;
    text-align: center;
    width: 420px;
-   border: solid 1px #E6E6E6;
+   border: none;
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   box-shadow: none;
+   outline: none;
    padding: 20px;
    border-top-right-radius: 10px;
    border-top-left-radius: 10px;
@@ -51,7 +55,7 @@ body{
   list-style-type: none;
   text-align: center;
   margin: 0 auto;
-  margin-top: -3px;
+  margin-top: -5px;
   padding-left: 0;
   -webkit-box-shadow: 10px 10px 78px 16px rgba(0,0,0,0.05);
   -moz-box-shadow: 10px 10px 78px 16px rgba(0,0,0,0.05);
@@ -87,29 +91,32 @@ body{
 .Remove-todo {
   float: right;
   border: none;
-  width: 19px;
-  height: 19px;
-  border-radius: 50%;
-  text-align: center;
+  width: 20px;
+  height: 20px;
   font-weight: 700;
-  font-size: 11px;
+  font-size: 10px;
+  padding-left: 7px;
   color: white;
   background-color: salmon;
   cursor: pointer;
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
 
 .Complete-button {
   float: left;
   border: none;
-  width: 19px;
-  height: 19px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  text-align: center;
-  font-weight: 700;
-  -webkit-user-select: none; /* Chrome/Safari */        
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+ */
+  padding-left: 7px;
   cursor: pointer;
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
 
 .Complete-button.completed {
