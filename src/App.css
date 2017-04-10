@@ -15,7 +15,6 @@ body{
   margin-top: 20px;
   height: 70px;
 }
-
 .App-header {
   background-color: #222;
   height: 150px;
@@ -50,6 +49,18 @@ body{
   width: 250px;
 }
 
+
+.options button {
+  border: none;
+  cursor: pointer;
+  -webkit-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
 .Todos {
   display: table;
   list-style-type: none;
@@ -76,16 +87,20 @@ body{
 
 .Todos.mobile li {
   width: 250px;
-  padding: 20px;
+  padding: 15px 20px;
 }
 
 .Completed.true p{
   display: inline;
   text-decoration: line-through;
+  animation: completed 1s forwards;
 }
 
 .Completed.false p {
   display: inline;
+  -webkit-animation: unmarked 1s forwards;
+  -o-animation: unmarked 1s forwards;
+  animation: unmarked 1s forwards;
 }
 
 .Remove-todo {
@@ -95,7 +110,7 @@ body{
   height: 20px;
   font-weight: 700;
   font-size: 10px;
-  padding-left: 7px;
+  padding-left: 6.5px;
   color: white;
   background-color: salmon;
   cursor: pointer;
@@ -110,7 +125,6 @@ body{
   border: none;
   width: 20px;
   height: 20px;
-  border-radius: 50%;
   padding-left: 7px;
   cursor: pointer;
   -webkit-border-radius: 50%;
@@ -127,13 +141,44 @@ body{
   background-color: lightblue;
 }
 
+.todo {
+  -webkit-animation: new-todo 0.3s forwards;
+  -o-animation: new-todo 0.3s forwards;
+  animation: new-todo 0.3s forwards;
+}
+
+
 li.Endblock {
   background-color: #F7F7F7;
   height: 20px;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   color: grey;
+  -webkit-animation: new-todo 1s forwards;
+  -o-animation: new-todo 1s forwards;
+  animation: new-todo 1s forwards;
 }
+
+@keyframes completed {
+    from { opacity: 1; transform: scale(1); }
+    to   { opacity: 0.2; transform: scale(0.5);}
+}
+
+@keyframes unmarked {
+  from { opacity: 0.2; transform: scale(0.5);}
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes new-todo {
+  from { opacity: 0; transform: translateY(-20%); }
+  to   { opacity: 1; transform: translateY(0%);}
+}
+
+@keyframes delete-todo {
+  from { opacity: 1; transform: translateY(0%);}
+  to { opacity: 0; transform: translateY(5%); }
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

@@ -7,9 +7,17 @@ const TodoList = (props) => {
         {matches => matches
            ? ( 
         <ul className='Todos mobile'>
+        {/*
+            <li>
+              <ul>
+                <li>All</li>
+                <li>Completed</li>
+                <li>Removed</li>
+              </ul>
+            </li> */}
                 {props.todos.map((todo, index) => {
                   return(
-                    <li key={index}>
+                    <li key={index} className="todo">
                       <button 
                         onClick={() => props.completeItem(index)}
                         className={
@@ -33,15 +41,22 @@ const TodoList = (props) => {
                     </li>
                     )
                 })}
-                <li className='Endblock'>Created by Serey Morm</li>
+                <li className='Endblock'>{props.todos.length} Tasks Listed</li>
               </ul>
         )
 
            : (
               <ul className='Todos'>
+              {/*
+                  <li className="options">
+                    <button className="all">All</button>
+                    <button className="completed">Complete</button>
+                    <button className="incomplete">Incomplete</button>
+                  </li>
+                */}
                 {props.todos.map((todo, index) => {
                   return(
-                    <li key={index}>
+                    <li key={index} className="todo">
                       <button 
                         onClick={() => props.completeItem(index)}
                         className={
@@ -65,7 +80,7 @@ const TodoList = (props) => {
                     </li>
                     )
                 })}
-                <li className='Endblock'>Created by Serey Morm</li>
+                <li className='Endblock'>{props.todos.length} Tasks Listed</li>
               </ul>
           )
          }
